@@ -251,7 +251,7 @@ uint32_t ESP32CAN::init(uint32_t ul_baudrate)
         }
     }
     //this task implements our better filtering on top of the TWAI library. Accept all frames then filter in here VVVVV
-    xTaskCreatePinnedToCore(&task_LowLevelRX, "CAN_LORX", 4096, this, 19, NULL, 1);
+    // xTaskCreatePinnedToCore(&task_LowLevelRX, "CAN_LORX", 4096, this, 19, NULL, 1);
     readyForTraffic = true;
     return ul_baudrate;
 }
